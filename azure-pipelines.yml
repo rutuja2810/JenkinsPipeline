@@ -1,14 +1,11 @@
-stages:
-- stage: Build
-  jobs:
-  - job: build
-    steps:
-    - script: npm install
-    - script: npm run build
+trigger:
+  branches:
+    include:
+      - main
 
-- stage: Test
-  jobs:
-  - job: test
-    steps:
-    - script: npm test
+pool:
+  vmImage: 'ubuntu-latest'
 
+steps:
+- script: echo "Hello, Azure Pipelines!"
+  displayName: "Run a simple script"
