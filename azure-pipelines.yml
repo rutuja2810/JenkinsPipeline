@@ -8,4 +8,4 @@ pool:
 
 steps:
 - script: echo "Hello, Azure Pipelines!"
-  displayName: "Run a simple script"
+  displayName: 'Print Hello Message'
